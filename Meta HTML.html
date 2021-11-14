@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/meta.css">
+        <title>
+        Meta HTML
+        </title>
+    </head>
+    <body>
+        <div class="top">
+            <font>
+            <a href="indexx.html" title="WEB DEV"> NOTES ON WEB DEV<sup>LP</sup>
+            </a>
+            </font>
+        </div>
+        <fieldset>
+            <h1>
+            Meta HTML
+            </h1>
+            <p>
+                So far we've just shown you HTML that produces something concrete, something visual. We now need to talk
+                about HTML that you still need but it won't produce visual things.
+            </p>
+            <p>
+                Let's start with the absolute basic foundations for an HTML page. Like a house needs a foundation, your HTML
+                document needs a basic framework to get up and going.
+            </p>
+            <div class="a"><b>
+                <xmp>
+                <!DOCTYPE html 5>
+                <html lang="en">
+                    <head>
+                        <title>My amazing HTML Document</title>
+                    </head>
+                    <body>
+                        <h1>Check this out</h1>
+                        <!-- Your amazing HTML here -->
+                    </body>
+                </html>
+                </xmp>
+                </b>
+            </div>
+            <div class="b">
+                Result--
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <title>My amazing HTML Document</title>
+                    </head>
+                    <body>
+                        <h1>Check this out</h1>
+                        <!-- Your amazing HTML here -->
+                    </body>
+                </html>
+            </div>
+            <p>This is about as barebones as you get. Let's dissect it point-by-point.
+            </p>
+            <b>
+            <xmp>
+            <!DOCTYPE html>
+            </xmp>
+            </b>
+            <p>
+                HTML is an old language. It was invented in 1993! While I'm sure the originators and the early adopters of
+                HTML did their best to make they could, there's no way they could have anticipated that we'd still be using
+                it 25 years and they needs we'd have. As such, HTML has had to evolve in many unexpected ways and part of
+                that is removing bad parts and mistakes that used to HTML as we go along. When they remove bad stuff and add
+                good stuff, they make a new version of HTML. The way we tell the browser that's reading the HTML what
+                version of HTML we're using is this first tag. This particular one is for HTML5, the latest (as of writing)
+                revision of HTML. HTML doesn't get revised very often so this will be the header you'll use for a long time
+                to come.
+            </p>
+            <b>
+            <xmp>
+            <html lang="en">
+            </html>
+            </xmp>
+            </b>
+            <p>
+            Everything (besides the doctype) goes into your</p>
+            <b>
+            <xmp> html</xmp>
+            </b>
+            <p> tag. You'll wrap everything in here. You also should give it a language attribute to let the browser know
+            what language your document is in which is what the</p>
+            <b>
+            <xmp> lang="en"</xmp>
+            </b>
+            <p> is communicating. This is useful to the browser to know for a number of reasons.
+            </p>
+            <b>
+            <xmp>
+        <head></head>
+        </xmp>
+        </b>
+        <p>First, there's</p>
+        <b>
+        <xmp>
+    <head></head>
+    </xmp>
+    </b>
+    <p>and also</p>
+    <b>
+    <xmp>
+<header></header>
+</xmp>
+</b>
+<p> and they are different. Be careful about that. We're talking about</p>
+<b>
+<xmp>
+<head></head>.
+</xmp>
+</b>
+<p>We'll first talk about</p>
+<b>
+<xmp>head.</xmp>
+</b>
+<p> Inside of</p>
+<b>
+<xmp> head</xmp>
+</b>
+<p> goes all of the meta-data to help the browser understand how to read your document. In our case, the only
+thing we're putting in</p>
+<b>
+<xmp>head</xmp>
+</b>
+<p> is the title of the document. What goes inside of</p>
+<b>
+<xmp>title</xmp>
+</b>
+<p> is what will the name of the tab of the browser. It's also the name of the Google or Bing search result.
+Basically, anywhere that's going to display the title of the web page will use what's inside of here. This
+is the theme of what goes in</p>
+<b>
+<xmp>head:</xmp>
+</b>
+<p> data that's useful for reasons other than displaying it. We can put a tag in here that prevents
+pinch-to-zoom on mobile if we needed that (don't do that!) We can put a tag that identifies the description
+and image that Google would use for search results. We'll see some more later but for now we'll stick with
+just a title.
+</p>
+<b>
+<xmp>
+<body></body>
+</xmp>
+</b>
+<p>All of our "visual" HTML will go in here. All your</p> <b>
+<xmp>divs, spans, imgs,</xmp>
+</b>
+<p> etc.
+</p>
+<b>
+<xmp>
+<script></script>, <style></style>,</xmp>
+</b>
+<p>and</p><b>
+<xmp>
+<link />
+</xmp>
+</xmp>
+</b>
+<p>We're about to talk about CSS and JavaScript, but know they have the above three tags,<b>
+<xmp>script, style,</xmp>
+</b>
+<p> and </p> <b>
+<xmp>link</xmp>
+</b>
+<p> are used for them,</p> <b>
+<xmp>script</xmp>
+</b>
+<p>being used for JavaScript and the latter two for CSS.
+</p>
+<h3><a href="Basic CSS.html" target="_blank" title="GO TO NEXT ONE">
+Basic CSS → </a>
+</h3>
+        <pre> <A href="HTML Next Steps.html" target="_blank" title="GO TO PREVIOUS ONE"> ← HTML Next Steps </a>
+</pre>
+</fieldset>
+</body>
+</html>

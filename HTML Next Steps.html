@@ -1,0 +1,406 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/next.css">
+        <title>
+        HTML Next Steps
+        </title>
+    </head>
+    <body>
+        <div class="top">
+            <font>
+            <a href="indexx.html" title="WEB DEV"> NOTES ON WEB DEV<sup>LP</sup>
+            </a>
+            </font>
+        </div>
+        <fieldset>
+            <h1>
+            HTML Next Steps
+            </h1>
+            <p>
+                We just discussed what the basic building block of HTML is: tags. We're going to explore a bit more about
+                what you can do with tags and then we'll move on to CSS.
+            </p>
+            <h2>
+            Attributes
+            </h2>
+            <p>
+                <p> Let's start with a text</p>
+                <b>
+                <xmp>input</xmp>
+                </b>
+                <p> tag. There are several types of</p>
+                <b>
+                <xmp> inputs</xmp>
+                </b>
+                <p>that we discussed in the previous section: text, color, checkboxes, radio buttons, etc. How can the browser
+                    tell which is meant to be what? HTML attributes! Attributes are additional pieces of information that you
+                can attach to HTML tags. We're going to use the</p>
+                <b>
+                <xmp> type</xmp>
+                </b>
+                <p> attribute to pass that to the browser.</p>
+            </p>
+            <div class="a">
+                <b>
+                <xmp>
+                <input type="checkbox" />
+                <input type="color" />
+                <input type="file" />
+                </xmp>
+                </b>
+            </div>
+            <div class="b">
+                Result--
+                <br>
+                <input type="checkbox" />
+                <input type="color" />
+                <input type="file" />
+            </div>
+            <p>
+                <b>
+                <XMP> type</XMP>
+                </b>
+                <p> is considered an attribute. Different tags have different attributes that they care about. For example, the
+                </p>
+                <b>
+                <xmp> type</xmp>
+                </b>
+                <p> attribute is not useful with</p>
+                <b>
+                <xmp> p, div, h1,</xmp>
+                </b>
+                <p>etc. You can still put a</p>
+                <b>
+                <xmp> type</xmp>
+                </b>
+                <p> attribute on these tags; they'll just ignore them.</p>
+            </p>
+            <p>
+            Exploring more on</p>
+            <b>
+            <xmp> inputs</xmp>
+            </b>
+            <p> (since they have a bunch of attributes,) here are some interesting ones:
+            </p><br><br>
+            <table>
+                <th>Code</th>
+                <th>Example</th>
+                <tr>
+                    <td><b>
+                        <xmp><input value="This is a pre-filled value" /></xmp>
+                    </b> </td>
+                    <td><input value="This is a pre-filled value" /> </td>
+                </tr>
+                <tr>
+                    <td><b>
+                        <xmp><input placeholder="This is a placeholder" /></xmp>
+                    </b> </td>
+                    <td><input placeholder="This is a placeholder" /> </td>
+                </tr>
+                <tr>
+                    <td><b>
+                        <xmp><input type="checkbox" checked /> </xmp>
+                    </b></td>
+                    <td><input type="checkbox" checked /> </td>
+                </tr>
+                <tr>
+                    <td><b>
+                        <xmp><input type="radio" checked /> </xmp>
+                    </b></td>
+                    <td><input type="radio" checked /> </td>
+                </tr>
+                <tr>
+                    <td><b>
+                        <xmp><input type="checkbox" disabled checked /> </xmp>
+                    </b></td>
+                    <td><input type="checkbox" disabled checked /> </td>
+                </tr>
+                <tr>
+                    <td><b>
+                        <xmp><input type="color" value="#FF0000" /> </xmp>
+                    </b></td>
+                    <td><input type="color" value="#FF0000" /> </td>
+                </tr>
+            </table>
+            <b>
+            <xmp> inputs</xmp>
+            </b>
+            <p> aren't the only ones to use attributes. In fact they are used everywhere in HTML. This is just to
+                demonstrate to you what they look like and how certain attributes do certain things. If something isn't
+                working for you, always check to see if you misspelled one of the tag names or attributes; that's an easy
+                thing to mess up and hard to tell it happened.
+            </p>
+            <h2>
+            Classes
+            </h2>
+            <p>
+                Classes are special attributes that can go on any tag, though some you won't use it with. While a class does
+                nothing itself, it allows that tag to be found by your CSS and your JavaScript. Using our house analogy, you
+                don't want to make a rule that says "all walls are south facing." It's nonsensical and you could never build
+            a house that way. Instead, you'd make a rule that says "walls marked</p>
+            <b>
+            <xmp> south-facing-wall</xmp>
+            </b>
+            <p>are south facing." This is what classes allow you to do: they allow you to mark your HTML so you can write
+                rules and code to govern them later. Let's see what that looks like.
+            </p>
+            <div class="c">
+                <b>
+                <xmp>
+                <div class="header">
+                    <h1 class="header-title">My Great Blog</h1>
+                </div>
+                <div class="blog-posts">
+                    <div class="post">
+                        <h1 class="post-title">When Not to Overextend House Metaphors</h1>
+                        <p class="post-text"> … </p>
+                    </div>
+                    <div class="postt">
+                        <h1 class="post-title">Another Great Blog Post</h1>
+                        <p class="post-text"> … </p>
+                    </div>
+                    </xmp>
+                    </b>
+                </div>
+                <div class="d">
+                    Result--
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="header">
+                        <h1 class="header-title">My Great Blog</h1>
+                    </div>
+                    <div class="blog-posts">
+                        <div class="post">
+                            <h1 class="post-title">When Not to Overextend House Metaphors</h1>
+                            <p class="post-text"> … </p>
+                        </div>
+                    </div>
+                    <div class="postt">
+                        <h1 class="post-title"> Another Great Blog Post </h1>
+                        <p class="post-text"> … </p>
+                    </div>
+                </div>
+                <p>
+                    What you see above is very typical looking HTML. Most tags will have classes. Now when I go to write CSS
+                later, I can target just</p>
+                <b>
+                <xmp> post-titles.</xmp>
+                </b>
+                <p> If I wrote a rule targeting</p> <b>
+                <xmp> h1s,</xmp>
+                </b>
+                <p> I'd get all the</p>
+                <b>
+                <xmp> post-titles</xmp>
+                </b>
+                <p> and the</p>
+                <b>
+                <xmp> header-title</xmp>
+                </b>
+                <p> as well. As you may imagine, you'll want the site header's h1 to look and act different than the blog post
+                title, just like the headers in this lesson look different than the "INTRO TO WEB DEV V2" in the header.</p>
+            </p>
+            <h2>
+            ID<sub>s
+            </sub>
+            </h2>
+            <p>IDs are far less useful than classes. Whereas you'll be using classes everywhere and frequently, you should
+            be using IDs very sparingly. As you see in our above</p>
+            <b>
+            <xmp> blog-posts</xmp>
+            </b>
+            <p> HTML, we can re-use classes like</p>
+            <b>
+            <xmp> post</xmp>
+            </b>
+            <p> and</p>
+            <b>
+            <xmp> post-title.</xmp>
+            </b>
+            <p> This is extremely important. As a coder, you want a piece of code and use it a lot. As coders, we want to
+                write as little code as possible (which we'll explore why later, for now trust me.) For now, be satisfied
+            that I get to write a little bit of code that governs</p>
+            <b>
+            <xmp> post</xmp>
+            </b>
+            <p> and have it affect every</p>
+            <b>
+            <xmp> post,</xmp>
+            </b>
+            <p>on the page.
+            </p>
+            <p>
+                Let's contrast that with IDs. When you designate something with an ID, you're affirming that<strong> this is
+                the only one of those on your website.</strong> Not even just that page, but your whole website.
+                Sometimes that is useful; just not very often. Some other coders and tutorials will tell you to never use
+                IDs; I think that's misguided. IDs are a sledgehammer. Most problems don't require a sledgehammer. However
+                sometimes you have problems that need a sledgehammer and then you're really grateful that you have one.
+            </p>
+            <p>Let's see what an ID would look like:
+            </p>
+            <div class="c">
+                <b>
+                <xmp>
+                <div class="header">
+                    <h1 class="header-title">My Great Blog</h1>
+                </div>
+                <div class="blog-posts">
+                    <div id="house-metaphors-post" class="post">
+                        <h1 class="post-title">When Not to Overextend House Metaphors</h1>
+                        <p class="post-text"> … </p>
+                    </div>
+                    <div class="post">
+                        <h1 class="post-title">Another Great Blog Post</h1>
+                        <p class="post-text"> … </p>
+                    </div>
+                </div </xmp>
+                </b>
+            </div>
+            <div class="d">
+                Result--
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="header">
+                    <h1 class="header-title">My Great Blog</h1>
+                </div>
+                <div class="blog-posts">
+                    <div class="post">
+                        <h1 class="post-title">When Not to Overextend House Metaphors</h1>
+                        <p class="post-text"> … </p>
+                    </div>
+                </div>
+                <div class="postt">
+                    <h1 class="post-title"> Another Great Blog Post </h1>
+                    <p class="post-text"> … </p>
+                </div>
+            </div>
+            <p>
+            Notice the first blog post has an</p>
+            <b>
+            <xmp> id</xmp>
+            </b>
+            <p> attribute in addition to its class. Notice I gave it a name very specific to that post; I can probably
+                guarantee that the only house metaphor post on my website so that name works. Later we'll go more in depth
+                on this, but you don't want to use CSS to tag IDs. You probably don't need to use JavaScript to target it;
+                classes normally suffice.
+            </p>
+            <p> So why do we have them? Well, they're really old and have been around forever so that's the mean reason.
+                Another reason that is very useful about IDs is that I now can make a link that takes you directly to that
+                ID in the page. Try clicking this <a href="#the-h1-part-way-down-the-page" title="Just move down">link </a>
+                (it won't leave this page.)
+            </p>
+            <h2>
+            The link should bring you here.
+            </h2>
+            <p>
+            This is done using just an ID. The code for that link is:</p><br>
+            <b>
+            <xmp> <a href="#the-h1-part-way-down-the-page">link</a>.</xmp>
+            </b>
+            <p> That</p>
+            <b>
+            <xmp>#</xmp>
+            </b>
+            <p> means go to that ID on the page.
+            </p>
+            <h2>
+            Naming and Tags to Use
+            </h2>
+            <p>
+                You generally want to give things useful names. There's a saying in computer science that there are two hard
+                things in computer science: cache invalidation, naming things, and off-by-one errors. (Cache invalidation is
+                another topic for another day.) So if you struggle to come up with names for things like classes and IDs,
+                you're not alone. As a programmer you get to name a lot of things.
+            </p>
+            <p>
+                Generally, with classes, you want to name things semantically. This is a fancy word (often used when talking
+                about HTML) that you want use tags and name things as close to what thing is and <strong>not</strong> what
+                it looks like.
+            </p>
+            <p>
+                Example, imagine this is a blog post on my website.
+            </p>
+            <article id="the-h1-part-way-down-the-page">
+                <span style="font-size: 25px;"> MY COOL BLOG POST TITLE
+                </span>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint exercitationem dignissimos veritatis, odit
+                    accusamus reiciendis dolorum ab harum dolorem ad et ducimus amet ut eos, itaque nostrum cumque magni
+                soluta.</p>
+            </article>
+            <p>
+                For the blog post title, what should I call the class? What tag should I use? I really can use any tag and
+                it'll mechanically work. Using CSS, you can make pretty much any tag look and act like any other. So if it
+                doesn't matter mechanically, why should it matter to me? The same reasons we layed out earlier:
+            </p><br>
+            <ul>
+                <li>
+                    <p>It makes the site accessible to everyone if you choose good tags. It's your responsibility to make
+                        sure the web remains accessible to everyone, including but not limited to: people with limited
+                        sight, limited motion of hands, arms or other limbs, limited hearing, and other permanent or
+                    temporary disabilities.</p>
+                </li>
+                <li>
+                    <p>It'll make it easier for you to come back later and maintain your code or for someone else to
+                    understand what you did. Code is communication between you and future readers.</p>
+                </li>
+                <li>
+                    <p>It makes it easier for Google, Bing, DuckDuckGo, etc. to crawl your website which means your site
+                    will rank higher.</p>
+                </li>
+            </ul>
+            <p>
+            Given that, it means we need to choose a tag that means that's a title. In this case, we can use an</p>
+            <b>
+            <xmp> h1</xmp>
+            </b>
+            <p> because that is the main header of that subsection. For the name of the class (note screen readers and other
+                accessibility tools do not read your class names or IDs; choosing good names here purely affects you and
+                others working on this code.)
+            </p>
+            <p>
+            Okay, cool, so let's give that</p>
+            <b>
+            <xmp> h1</xmp>
+            </b>
+            <p> a good class name. How about</p>
+            <b>
+            <xmp> red-title?</xmp>
+            </b>
+            <p> It's a title and it's red; fits, right? While that may seem appropriate and fitting now, what if you need to
+                change your blog's styling the following week and now that blog post looks like this:
+            </p>
+            <article class="art">
+                <h4>
+                MY COOL BLOG POST TITLE
+                </h4>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint exercitationem dignissimos veritatis, odit
+                    accusamus reiciendis dolorum ab harum dolorem ad et ducimus amet ut eos, itaque nostrum cumque magni
+                soluta.</p>
+            </article>
+            <p>
+            If your title is still called</p>
+            <b>
+            <xmp> red-title,</xmp>
+            </b>
+            <p> you have a bit of a problem! Now your class name is not only not descriptive of what the item is, it's
+                actually wrong which will make it way more confusing to you and other laters. Now, you may say that you can
+                just change the class name when you go to update but believe me that's not a good option either. If you've
+                used that class 1,000 times throughout your website (not that farfetched) you'd have to update 1,000
+                different things. No, it's better if we give it a good name the first time, descriptive of not what it looks
+            like but descriptive of what role it serves. In this case, we could call it something like</p>
+            <b>
+            <xmp> blog-post-title</xmp>
+            </b>
+            <p> or</p>
+            <b>
+            <xmp> post-head</xmp>
+            </b>
+            <p> or something of that nature. That class then always be descriptive of what the thing is and not what it
+                looks like.
+            </p>
+            <h3> <a href="Meta HTML.html" target="_blank" title="GO TO NEXT ONE">
+            Meta HTML → </a>
+            </h3>
+                    <pre> <A href="Basic.html" target="_blank" title="GO TO PREVIOUS ONE"> ← Basic HTML </a>
+        </pre>
+    </fieldset>
+</body>
+</html>

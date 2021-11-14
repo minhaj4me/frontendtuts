@@ -1,0 +1,216 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/effective.css">
+  <title>
+    Effective Patterns for Writing CSS
+  </title>
+</head>
+
+<body>
+  <div class="top">
+    <font>
+      <a href="indexx.html" title="WEB DEV"> NOTES ON WEB DEV<sup>LP</sup>
+      </a>
+
+    </font>
+  </div>
+
+  <fieldset>
+    <h1>
+      Effective Patterns for Writing CSS
+    </h1>
+    <p>Okay, so we've gotten this far; it's time for you to start thinking about your first project: an imaginary news
+      site. Before that, I want to dwell a bit on some things we've sort of hand-waved over and want to make sure
+      they're explained to you:
+
+    </p>
+    <h2>Connecting CSS and HTML
+    </h2>
+    <p>You have two choices here, a <span>link</span> tag and a <span>style</span> tag. I'll gloss over
+      <span>style</span> because I don't want you to use it, but I want you to know it's there.
+    </p>
+    <b>
+      <xmp>
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+          <title>My amazing HTML Document</title>
+          <style>
+            .my-brand {
+              color: red;
+            }
+          </style>
+        </head>
+
+        <body>
+          <h1 class="my-brand">Check this out</h1>
+          <!-- Your amazing HTML here -->
+        </body>
+
+        </html>
+      </xmp>
+    </b>
+    <p>See the <span>style</span> tag in the head? This allows you to write CSS directly in an HTML document. Anything
+      inside in the <span>style</span> tag will be read as CSS and applied to the whole document. This can be useful to
+      rapidly test something out, but in reality you should really never need to use <span>style</span> tags.
+    </p>
+    <p>Rather, what we want is to have an HTML document and a separate CSS document that is loaded by the HTML document.
+      This is useful because we get to keep all the <b>content</b> (HTML) and the <b>styling</b> (CSS) separate. This is
+      called separation of concerns, and it's useful in many ways with programming. The idea is that is that you use
+      each file to focus on doing one thing and doing it well. Where possible, it's best to separate things so you have
+      many small files instead of a few big ones. Here, we want to separate our CSS and our HTML into different pages.
+
+    </p>
+
+    <p>What that looks like:
+
+    </p>
+
+    <p>Our index.html file:
+
+    </p>
+    <b>
+      <xmp>
+        <html lang="en">
+
+        <head>
+          <title>My amazing HTML Document</title>
+          <link rel="stylesheet" href="./style.css" />
+        </head>
+
+        <body>
+          <h1 class="my-brand">Check this out</h1>
+          <!-- Your amazing HTML here -->
+        </body>
+
+        </html>
+      </xmp>
+    </b>
+    <p>Our style.css file (located in the same folder as the index.html file)
+
+    </p>
+    <b>
+      <xmp>.my-brand {
+        color: red;
+        }
+      </xmp>
+    </b>
+    <p>The key here is the <span>
+        <link rel="stylesheet" href="./style.css" /></span>. Let's break it down. A link tag is nearly always found in
+      the <span>head</span> and links another file to that HTML document. Nearly always (99.9% of the time), it's to a
+      <span>stylesheet</span>, hence the <span>rel="stylesheet"</span>. The <span>href</span> is where that other file
+      is located. It refers to the file name. In this case, we have a file called <span>style.css</span> and it is
+      located in the same folder as the <span>index.html</span> file, which is what the <span>./</span> part of the
+      <span>./style.css</span> means. You could also write it as <span>"style.css"</span> if it's in the same directory,
+      it also means it's located in the same folder, but I wanted you to see the <span>./</span> because you'll see it
+      everywhere. We'll cover how it works later when we start working more with the terminal.
+
+    </p>
+    <h2>When to Actually Use the Cascade
+    </h2>
+    <p>Before I told you to use the cascade as little as possible, but I did want to share with you when it can be
+      useful to use. Imagine we have the following three buttons:
+
+    </p>
+    <b>
+      <xmp>
+        <style>
+          .ex-btn {
+            background-color: #eee;
+            border: 2px solid #aaa;
+            padding: 4px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 17px;
+            cursor: pointer;
+            /* changes the mouse when you hover the button */
+          }
+
+          .ex-btn-warn {
+            color: white;
+            background-color: crimson;
+            border-color: darkred;
+          }
+
+          .ex-btn-success {
+            color: white;
+            background-color: limegreen;
+            border-color: green;
+          }
+        </style>
+
+        <button class="ex-btn">Default Button</button>
+        <button class="ex-btn ex-btn-warn">Warn Button</button>
+        <button class="ex-btn ex-btn-success">Success Button</button>
+      </xmp>
+    </b>
+
+    <div class="a">
+      <style>
+        .ex-btn {
+          background-color: #eee;
+          border: 2px solid #aaa;
+          padding: 4px 15px;
+          border-radius: 5px;
+          font-weight: bold;
+          font-size: 17px;
+          cursor: pointer;
+          /* changes the mouse when you hover the button */
+        }
+
+        .ex-btn-warn {
+          color: white;
+          background-color: crimson;
+          border-color: darkred;
+        }
+
+        .ex-btn-success {
+          color: white;
+          background-color: limegreen;
+          border-color: green;
+        }
+      </style>
+
+      <button class="ex-btn">Default Button</button>
+      <button class="ex-btn ex-btn-warn">Warn Button</button>
+      <button class="ex-btn ex-btn-success">Success Button</button>
+    </div>
+    <p>These buttons are relatively similar and differ only in colors but the spacing and text styling are all the same.
+      It'd be nice if we could write the common styles in one rule and then overrule just the colors. We can, using the
+      cascade!
+
+    </p>
+    <p>Since those classes come lower on the page, they "win" on the properties that they conflict with, and thus we
+      only overwrite the things we want. Why is this better? Imagine later you want to change the text to be smaller and
+      the border to be thinner. Now instead of having to change the style for each button, you change it once in their
+      common class, <span>.ex-btn</span> and that affects all of them! This principle is generally called <b>DRY</b>
+      which stands for "don't repeat yourself", meaning if you can have one place for common code or rules, it's better
+      to do that than have it in 50 different places. While having three copies of the same rules doesn't seem like a
+      big deal, many websites will have 10+ sorts of buttons and it quickly becomes impossible to manage.
+
+    </p>
+    <h2>DevTools</h2>
+    <p>Your browser has fantastic dev tools built into it. The easiest way to start playing with them is right-click on
+      something on the web and click "Inspect Element". This will take you to the Elements Explorer. It lets you look at
+      the HTML that's on the page and the CSS that's affecting those elements. Super super useful. Poke around and get
+      used to playing with the dev tools. You'll live here as front end developer. Most of the other tools are for
+      JavaScript but we'll get there in a bit.
+
+    </p>
+
+    <h3> <a href="Project: HTML & CSS.html" target="_blank" title="GO TO NEXT ONE">
+        Project: HTML & CSS → </a>
+    </h3>
+
+    <pre style="
+ font-size: 20px;
+ font-family: cursive;
+ font-weight: bold;
+ margin-top:-44px;"> <a href="Layout CSS.html" target="_blank" title="GO TO PREVIOUS ONE"> ← Layout CSS </a>
+ </pre>
+  </fieldset>
+</body>
+
+</html>
