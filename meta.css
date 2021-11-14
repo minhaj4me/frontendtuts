@@ -1,0 +1,100 @@
+body{
+    background-image:linear-gradient(360deg, gray ,white );
+}
+.top{
+    top: 0px;
+    width: 100%;
+    height: 10%;
+    font-size:30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: dimgray;
+    background-color: grey 1 ;
+    position: fixed; 
+    text-align: start;
+}
+fieldset{
+    height: 420%;
+    margin-top:5%;
+    background-color: beige;
+}
+h1{
+    margin-top:0%;
+    font-size: 40px;
+    font-family: cursive;
+}
+p{
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h2{
+    margin-top:2%;
+    font-size: 40px;
+    font-family: cursive;
+}
+
+h3{
+    margin-left: 0px;
+     font-family: cursive;
+    float: right;
+    }
+    h4{
+        text-align: center;
+        font-family: cursive;
+        font-size: large;
+    }
+a{
+    text-decoration: none;
+    color:blue;
+
+}
+a:hover{
+    text-decoration: underline;
+    color:darkgrey;
+background-color: darkblue;}
+
+.a{
+ padding-bottom:1%;
+ height: 7px;
+background-color:yellowgreen;
+font-size: 15px;
+}
+.b{
+margin-top:22%;
+        padding-bottom:10px;
+        height:70px;
+    background-color:rgb(84, 231, 150);
+    font-size: 20px;
+}
+
+xmp{
+    font-size: 20px;
+    background-color: lightsteelblue;
+}
+.c{
+
+    padding-bottom:2.5%;
+    height:0.9%;
+background-color:yellowgreen;
+font-size: 15px;
+}
+.d{
+    border: 2px dashed blue;
+margin-top: 25%;
+    padding-bottom:2%;
+    height: 7.8%;
+    width: 50%;
+background-color:(55, 172, 146);
+font-size: 25px;
+}
+.e{
+    height: 80px;
+    background-color:gold;
+    
+}
+pre{ 
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    margin-top:35px;
+}

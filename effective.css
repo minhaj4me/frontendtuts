@@ -1,0 +1,81 @@
+body{
+    background-image:linear-gradient(360deg, gray ,white );
+}
+.top{
+    top: 0px;
+    width: 100%;
+    height: 10%;
+    font-size:30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: dimgray;
+    background-color: grey 1;
+    position: fixed; 
+    text-align: start;
+}
+fieldset{
+    height:450%;
+    margin-top:5%;
+    background-color: beige;
+}
+h1{
+    margin-top:0%;
+    font-size: 40px;
+    font-family: cursive;
+}
+p{
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h2{
+    margin-top:2%;
+    font-size: 40px;
+    font-family: cursive;
+}
+
+h3{
+    margin-left: 80%;
+     font-family: cursive;
+    margin-right:5px;
+    }
+    h4{
+        text-align: center;
+        font-family: cursive;
+        font-size: large;
+    }
+
+    span{
+        background-color: cadetblue;
+        }
+
+a{
+    text-decoration: none;
+    color:blue;
+
+}
+a:hover{
+    text-decoration: underline;
+    color:darkgrey;
+background-color: darkblue;}
+
+.a{margin-top: 2%;
+    border: 1px solid red;
+ padding:1.5% 1.5%;
+ height: 1%;
+background-color:wheat;
+
+
+}
+
+xmp{
+    font-size: 20px;
+    background-color: lightsteelblue;
+}
+    
+}
+pre{ 
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    margin-top:-44px;
+}
