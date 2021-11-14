@@ -1,0 +1,127 @@
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/fend.css">
+		<title>
+		Frontend Tuts
+		</title>
+		<style type="text/css" id="dcoder_stylesheet">
+			body{
+				background-image:linear-gradient(360deg, gray ,white );
+			}
+			.mid{
+				border-radius: 100px;
+				padding-top:15px;
+				text-align: center;
+				height: 45%;
+				width: 50%;
+				margin-left: 25%;
+				margin-top: 10%;
+				background-color:rgba(221, 210, 210, 0.253) ;
+				color: grey;
+				font-size: 90px;
+				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+			}
+			button{
+				background-color:darkgrey;
+				font-size:25px;
+			}
+		}
+		@media screen and (max-width:1366px){
+			
+			.mid{
+				width: 50%;
+			}
+		}
+		@media screen and (max-width:1024px){
+			
+			.mid{
+				width: 50%;
+			}
+		}
+		@media screen and (max-width:900px){
+			
+			.mid{
+				width: 40%;
+				font-size: 62px;
+			}
+		}
+		@media screen and (max-width:700px){
+			
+			.mid{
+				width: 40%;
+				font-size: 60px;
+			}
+		}
+		@media screen and (max-width:480px){
+			
+			.mid{
+				width: auto;
+				font-size:10px;
+			}
+	}</style></head>
+	<body>
+		<div class="mid">
+			Frontend Tuts
+			<br>
+			<br>
+			<a href="htdocs/indexx.html" target="_blank" title="Welcome to Frontend Tuts"><button type="button"> Welcome </button> </a>
+		</div>
+		<style>
+		/* Add some padding on document's body to prevent the content
+		to go underneath the header and footer */
+		/*body{
+		padding-top: 60px;
+		padding-bottom: 40px;
+		}*/
+		.fixed-header, .fixed-footer{
+			width: 100%;
+			position: fixed;
+			background: grey;
+			padding: 10px 0;
+			color: #fff;
+			left:0;
+		}
+		.fixed-header{
+			top: 0;
+		}
+		.fixed-footer{
+			bottom: 0;
+			
+		}
+		.container{
+			width:100%;
+			margin: 0 auto; /* Center the DIV horizontally */
+			text-align: center;
+			height: auto;
+		}
+		.navbar
+		{
+			width:100%;
+			margin: 0 auto; /* Center the DIV horizontally */
+			height: auto;
+			font-weight: bold;
+		}
+		nav a{
+			color: #fff;
+			text-decoration: none;
+			padding: 7px 25px;
+			display: inline-block;
+		}
+		</style>
+		<div class="fixed-header">
+			<div class="navbar">
+				<nav>
+					<a href="index.html" title="Home">Home</a>
+					<a href="about.html" title="About">About</a>
+					<a href="contact.html" title="Feel free to your contact">Contact</a>
+				</nav>
+			</div>
+		</div>
+		<div class="fixed-footer">
+			<div class="container">
+				Copyright © 2020
+			</div>
+		</div>
+		
+	</body>
+</html>
